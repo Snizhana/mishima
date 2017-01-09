@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>mishima</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'libs/fullpage.js/jquery.fullPage.css' %}">
+<link rel="stylesheet" href="{% static 'style/css/Site.css' %}" media="screen">
+<script type="text/javascript" src="{% static 'libs/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'libs/fullpage.js/jquery.fullPage.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/dist/all.js' %}"></script>
+</head>
+<body>
+  <nav class="nav">
+    <span class="nav__ico"><i class="fa fa-bars"></i></span>
+    <ul>
+      <li><a href="#">Bibliography</a></li>
+      <li><a href="#">Filmography</a></li>
+      <li><a href="#">About Project</a></li>
+    </ul>
+    <span class="nav__lang">
+      <a href="#">En</a>
+      <a href="#">日本語</a>
+    </span>
+    <span class="nav__ico"><i class="fa fa-volume-down"></i></span>
+  </nav>
+  <div class="main-container">
+    {% block content %}{% endblock content %}
+  </div>
+</body>
+</html>

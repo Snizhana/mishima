@@ -1,0 +1,68 @@
+@import "./helpers";
+
+
+/* fonts */
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url(../../fonts/LibreBaskerville-Regular.otf) format(opentype);
+}
+@font-face{
+  font-family: Avenir;
+  font-weight: normal;
+  src: url(../../fonts/Avenir.ttc) format(opentype);
+}
+@font-face{
+  font-family: 'Avenir-Heavy';
+  font-weight: bold;
+  src: url(../../fonts/Avenir-Heavy.ttf) format(truetype);
+}
+@font-face{
+  font-family: Baskerville;
+  src: url(../../fonts/Baskerville.ttf) format(opentype);
+}
+@font-face{
+  font-family: 'Avenir Book';
+  src: url(../../fonts/Avenir-Book.ttf) format(opentype);
+}
+@font-face{
+  font-family: 'Avenir Black';
+  src: url(../../fonts/Avenir-Black.ttf) format(opentype);
+}
+/* fonts */
+
+/* headers and paragraphs */
+h1{
+  font-size: em(114);
+  line-height: 110px;
+}
+h3{
+  font-size: em(38);
+}
+h4{
+  font-size: em(36);
+  font-weight: bold;
+  margin: 15px 0;
+}
+h6{
+  font: normal em(18) Avenir, sans-serif;
+  text-transform: capitalize;
+  margin: 15px 0;
+}
+h1, h3{
+  font-family: LibreBaskerville, serif;
+  font-weight: normal;
+  margin: 0;
+}
+/* headers and paragraphs */
+
+.btn{
+  background-color: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+  padding: 22px 62px;
+  position: fixed;
+  font: normal small-caps normal em(18) Baskerville, sans;
+  z-index: 1;
+}

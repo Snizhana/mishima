@@ -1,0 +1,226 @@
+@import "./consts";
+@import "./helpers";
+@import "./typo";
+
+html,
+body,
+.main-container{
+  height: 100%;
+}
+body{
+  color: white;
+  font: 100% 'Libre Baskerville', serif;
+  margin: 0;
+
+  .nav{
+    background-color: $black;
+    font: em(15) 'Avenir-Heavy', sans-serif;
+    left: 0;
+    line-height: 30px;
+    opacity: .95;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    .nav__ico{
+      color: $gold;
+      font-size: em(24);
+      position: absolute;
+
+      &:first-child{
+        top: 24px;
+        left: 30px;
+      }
+      &:last-child{
+        background-color: #141414;
+        padding: 18px 28px;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    ul{
+      display: inline-block;
+      margin: 21px 0 21px 87px;
+      padding: 0;
+
+      li{
+        display: inline;
+        list-style-type: none;
+        padding: 0 20px;
+
+        a{
+          color: inherit;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+    .nav__lang{
+      float: right;
+      margin: 20px 80px;
+
+      a{
+        color: inherit;
+        margin-right: 5px;
+        text-decoration: none;
+        &:first-child{
+          color: $gold;
+        }
+      }
+    }
+  }
+  .hero-section{
+    background: url(../../img/bg.jpg) no-repeat -25px -50px;
+    background-size:cover;
+    background-size: calc(100% + 50px) calc(100% + 50px) cover;
+    min-width:calc(100% + 50px);
+    min-height:calc(100% + 100px);
+    height:100%;
+    position: fixed;
+
+    .hero-section__abstract{
+      .hero-section__pointer{
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 60px;
+
+        span:nth-child(even){
+          color: $gold;
+          font: em(16) 'Avenir-Heavy', sans-serif;
+          margin: 0 80px;
+        }
+        span:nth-child(odd){
+          font-size: em(35);
+          vertical-align: middle;
+        }
+      }
+    }
+    .life-bg,
+    .death-bg{
+      img{
+        display: none;
+        position: fixed;
+        min-height: 100%;
+        z-index: 1;
+        width: 50%;
+      }
+      input{
+        bottom: 90px;
+        display: none;
+      }
+      .btn-visible{
+        display: block;
+      }
+    }
+    .life-bg{
+      img{
+        left:0;
+      }
+      input{
+        left: 200px;
+      }
+    }
+    .death-bg{
+      img{
+        right:0;
+      }
+      input{
+        right: 200px;
+      }
+    }
+    .hero-section__abstract > div:first-child{
+      color: #fff;
+      left: 50%;
+      width: 720px;
+      position: fixed;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'MinionPro-Regular';
+      font-size: em(15);
+
+      p{
+        font-family: Avenir, sans-serif;
+        line-height: 23px;
+      }
+    }
+
+    .hero-section__abstract > div > span{
+      display: inline-block;
+      font-size: em(20);
+
+      span{
+        padding: 0 40px;
+      }
+      hr{
+        background-color: #3a3a3a;
+        border: none;
+        height: 1px;
+        margin: 20px 0 14px 0;
+        width: 100%;
+      }
+    }
+  }
+
+
+  .fullpage-container{
+    display: none;
+
+    section.section{
+      .story{
+        color: #141414;
+        height: 100%;
+
+        .story__bg-wrapper,
+        .story__text-wrapper{
+          width: 50%;
+        }
+        .story__bg-wrapper{
+          .story__img{
+            min-height: 100%;
+            opacity: 0;
+            position: fixed;
+            top: 70px;
+            width: 50%;
+
+            &:first-child{
+              opacity: 1;
+            }
+          }
+        }
+        .story__text-wrapper{
+          float: right;
+          // TODO: calc the text wrapper height
+          max-height: calc(100vh - 70px);
+          margin-top: 70px;
+          overflow-y: scroll;
+          position: relative;
+
+          hr{
+            margin: 30px 0;
+          }
+
+          .story__content{
+            span{
+              float: left;
+              font-size: em(80);
+              line-height: 90px;
+              margin-right: 18px;
+            }
+
+            div{
+              line-height: 2;
+            }
+          }
+        }
+        .story__text-wrapper > div{
+          margin: 55px 30px 55px 50px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

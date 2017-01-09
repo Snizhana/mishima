@@ -1,0 +1,14 @@
+{% extends 'story/story.html' %}
+{% load static %}
+
+{% block images %}
+<img class="story__img" src="{% static 'img/life_pic1.jpg' %}" alt="life_pic1">
+<img class="story__img" src="{% static 'img/life_pic2.jpg' %}" alt="life_pic2">
+<img class="story__img" src="{% static 'img/life_pic3.jpg' %}" alt="life_pic3">
+{% endblock images %}
+{% block header %}{{header}}{% endblock header %}
+{% block subheader %}{{subheader}}{% endblock subheader %}
+{% block text %}
+  <span>{{text|slice:":1"}}</span>
+  <div>{{text|linebreaksbr|slice:"1:"}}</div>
+{% endblock text %}

@@ -1,0 +1,6 @@
+$font-context: 16;
+
+
+@function em($pixels, $context: $font-context) {
+  @return #{$pixels/$context}em
+}

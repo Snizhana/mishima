@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="hero-section" id="heroSection">
+    <div class="life-bg" id="lifeBg">
+      <img src="{% static 'img/life.jpg' %}" alt="Mishima's life">
+      <input class="btn" type="button" name="life" value="Choose Life">
+    </div>
+    <div class="death-bg" id="deathBg">
+      <img src="{% static 'img/death.jpg' %}" alt="Mishima's death">
+      <input class="btn" type="button" name="right" value="Choose Death">
+    </div>
+    <div class="hero-section__abstract" id="abstract">
+      <div>
+          <h3>The Life and Death of</h3>
+          <h1>Yukio Mishima</h1>
+          <span>
+            <span>January 14, 1925 —  November 25, 1970</span>
+            <hr>
+          </span>
+          <p>
+            Japanese author, poet, playwright, actor, and film director.
+            Mishima is considered one of the most important Japanese authors of the 20th century,
+            he was nominated three times for the Nobel Prize in Literature.
+            He is remembered for his ritual suicide by seppuku after a failed coup d'état attempt,
+            known as the «Mishima Incident».
+          </p>
+      </div>
+      <div class="hero-section__pointer">
+        <span>
+          <i class="fa fa-angle-left"></i>
+        </span>
+        <span>Choose Your Story</span>
+        <span>
+          <i class="fa fa-angle-right"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div id="fullpage" class="fullpage-container">
+    <section class="section">
+      {% include "chapter1/chapter1.html" with header=stories.0.header subheader=stories.0.subheader text=stories.0.text %}
+    </section>
+  </div>
+{% endblock content %}

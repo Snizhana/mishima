@@ -1,0 +1,13 @@
+<div class="story">
+  <div class="story__bg-wrapper">
+    {% block images %}{% endblock images %}
+  </div>
+  <div class="story__text-wrapper story__text-wrapper-scollable">
+    <div>
+      <h4>{% block header %}{% endblock header %}</h4>
+      <h6>{% block subheader %}{% endblock subheader %}</h6>
+      <hr>
+      <div class="story__content">{% block text %}{% endblock text %}</div>
+    </div>
+  </div>
+</div>
